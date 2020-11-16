@@ -6,14 +6,36 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the integer
 	//   array is in ascending order and false otherwise
-
+static public boolean intArraySorted (int [] integers) {
+	int lastThing=Integer.MIN_VALUE; //smallest number 
+	for (int i=0;i<integers.length;i++) {
+		if (lastThing<=integers[i]) {
+			lastThing=integers[i];
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
+}
 	
 	//2. Write a static method called doubleArraySorted. 
 	//   This method takes in an array of doubles
 	//   and it returns a boolean.
 	//   The method returns true if the double
 	//   array is in ascending order and false otherwise
-
+static public boolean doubleArraySorted (double [] doubles) {
+	double lastt=Double.MIN_VALUE;
+	for (int i=0;i<doubles.length;i++) {
+		if (lastt<=doubles[i]) {
+			lastt=doubles[i];
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
+}
 	
 	//3. Write a static method called charArraySorted. 
 	//   This method takes in an array of characters
