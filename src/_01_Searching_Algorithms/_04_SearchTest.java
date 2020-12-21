@@ -11,6 +11,10 @@ class _04_SearchTest {
 	@Test
 	public void testLinearSearch() {
 		//1. use the assertEquals method to test your linear search method.
+		String[] array= {"aa","bb","cc","dd"};
+		assertEquals(_00_LinearSearch.linearSearch(array,"cc"),2);
+		assertEquals(_00_LinearSearch.linearSearch(array,"ee"),-1);
+		assertEquals(_00_LinearSearch.linearSearch(array,"aa"),0);
 	}
 
 	@Test

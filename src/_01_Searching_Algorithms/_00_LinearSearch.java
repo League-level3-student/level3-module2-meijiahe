@@ -10,8 +10,6 @@ public class _00_LinearSearch {
 		//   where the value was found.
 		//   If the value is not found in the array, return -1.
 	
-			
-		
 		for (int i=0;i<words.length;i++) {
 			if (value.equals(words[i])) {
 				return i;
