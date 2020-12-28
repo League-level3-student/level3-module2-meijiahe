@@ -21,7 +21,7 @@ public class _03_ExponentialSearch {
 		//    	counter is less than the length of the array,
 		//		and the array element at counter is less than or equal to value
 		while (counter<array.length&&array[counter]<=value){
-			counter=2;
+			counter=counter*2;
 		}
 			//5. inside the while loop, double the value of counter.
 

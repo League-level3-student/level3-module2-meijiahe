@@ -28,7 +28,7 @@ public class _02_InterpolationSearch {
     		  }
     		  return -1;
     	  }
-      }
+      
 		//4. If start is equal to end,
 		//     then check if the array element at start is equal to the value
 		//     and return start if it is, otherwise return -1.
@@ -52,7 +52,9 @@ public class _02_InterpolationSearch {
             else {
             	end=position-1;
             }
+      }
         //9. Return -1 because the value was not found
         return -1;
+      
     }
 }
