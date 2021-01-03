@@ -20,7 +20,22 @@ return mult;
 	    assertEquals("10 x 10 = 100", multiply(10, 10));
 	    assertEquals("8 x 11 = 88", multiply(8, 11));
 	  }
-public void 
+public static boolean isPrime (int value) {
+	int[] array= {2,3,5,7,17,31};
+	for (int i=0;i<array.length;i++) {
+		if (value==array[i]) {
+			
+			return true;
+		}
+		
+		if (value%array[i]==0){
+			
+			return false;
+		}
+		
+	}
+	return true;                 
+}
 	@Test
 	  public void PrimeTest() {
 
@@ -32,7 +47,14 @@ public void
 	    assertFalse(isPrime(527));
 
 	  }
-
+public static boolean isSquare (int value) {
+	for (int i =1;i<=Math.floor(Math.sqrt(value));i++) {
+		if (i*i==value) {
+			return true;
+		}
+	}
+	return false;
+}
 	@Test
 	  public void SquareTest() {
 
@@ -46,7 +68,14 @@ public void
 	    assertFalse(isSquare(143));
 
 	  }
-
+	public static boolean isCube (int value) {
+		for (int i =1;i<=Math.floor(Math.sqrt(value));i++) {
+			if (i*i*i==value) {
+				return true;
+			}
+		}
+		return false;
+	}
 	@Test
 	  public void CubeTest() {
 
@@ -59,7 +88,7 @@ public void
 	    assertFalse(isCube(143));
 
 	  }
-//
+
 
 
 }
