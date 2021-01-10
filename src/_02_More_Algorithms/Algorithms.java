@@ -1,5 +1,6 @@
 package _02_More_Algorithms;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Algorithms {
@@ -29,8 +30,30 @@ public class Algorithms {
 		}
 		return big;
 	}
-	public static String findLongestWord(List<String> words) {
-		
-		return "ehdfjisoi";
+	public static String findLongestWord(List<String> w) {
+		int longest = 0;
+		String l = "";
+		for (int i =0;i<w.size();i++) {
+			if (w.get(i).length()>longest) {
+				longest =w.get(i).length();
+				l = w.get(i);
+			}
+		}
+		return l;
 	}
+	
+	public static boolean containsSOS (List<String> m) {
+		if (m.contains("... --- ...")) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public static List<Double> sortScores (List<Double> results) {
+		List<Double> out= new ArrayList<Double>();
+		return out;
+	}
+	
 }
