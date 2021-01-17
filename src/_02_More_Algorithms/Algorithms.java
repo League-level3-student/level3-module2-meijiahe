@@ -86,4 +86,20 @@ public class Algorithms {
 		}
 		return sortedSequences;
 	}
+	public static List<String> sortWords (List<String> words){
+		boolean isorder = false;
+		while (isorder == false) {
+			isorder=true;
+			for (int i = 1; i < words.size(); i++) {
+				if (words.get(i).compareTo(words.get(i - 1))<0) {
+					String num = words.get(i);
+					words.set(i, words.get(i - 1));
+					words.set(i - 1, num);
+					isorder=false;
+				}
+
+			}
+		}
+		return words;
+	}
 }
