@@ -9,16 +9,21 @@ public class RecursionMath {
 	public static int recursiveMultiplication(int number, int times) {
 		//2. if times is 1 
 			//3. return number 
-		
+		if (times==1) {
+			return number;
+		}
 		//4. else return number + recursionMultiplication(number, times-1)
 		
-		return 0;
+		return number + recursiveMultiplication(number, times-1);
 	}
 	
 	//6. Try this one on your own! 
 	//Hint: if numberToDevideBy is bigger than number, you can't divide anymore
 	public static int recursiveDivision(int number, int numberToDevideBy) {
-		return 0;
+		if (numberToDevideBy==1) {
+			return number;
+		}
+		return number - recursiveDivision(number, numberToDevideBy*number-1);
 		
 	}
 	
