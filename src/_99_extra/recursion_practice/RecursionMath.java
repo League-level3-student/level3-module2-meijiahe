@@ -19,41 +19,58 @@ public class RecursionMath {
 	
 	//6. Try this one on your own! 
 	//Hint: if numberToDevideBy is bigger than number, you can't divide anymore
+	
+	
 	public static int recursiveDivision(int number, int numberToDevideBy) {
-		if (numberToDevideBy==1) {
-			return number;
+		if (number-numberToDevideBy<=0) {
+			return 1;
 		}
-		return number - recursiveDivision(number, numberToDevideBy*number-1);
+		// divide(a - b, b) + 1
+		return recursiveDivision(number-numberToDevideBy, numberToDevideBy)+1;
 		
 	}
 	
 	//8. Try this one on your own!
+
 	public static int recursivePower(int number, int power) {
-		return 0;
-		
+		if (power==0) {
+			return 1;
+		}
+		if (power==1) {
+			return number;
+		}
+		if(power<0) {
+			return 1/recursivePower(number,-power);
+		}
+		else {
+			int results = number * recursivePower(number,power-1);
+			return results;
+		}
 	}
 	
 	
 	
 	@Test
-	void testMultiplication() {
+	public void testMultiplication() {
 		assertEquals(12, recursiveMultiplication(3, 4));
 		//1  Add more JUnit tests like the one above to test your method
-		
+		assertEquals(6, recursiveMultiplication(2, 3));
 	}
 	
 	
 	@Test
-	void testDivision() {
+	public void testDivision() {
 		//5  Add JUnit tests to test your method
-		
+		assertEquals(2, recursiveDivision(12, 6));
+		assertEquals(3, recursiveDivision(15, 5));
 	}
 	
 	
 	@Test 
-	void testPower() {
+	public void testPower() {
 		//7  Add JUnit tests to test your method
-	
+		assertEquals(9, recursivePower(3, 2));
+		assertEquals(16, recursivePower(4, 2));
 	}
 	
 }
